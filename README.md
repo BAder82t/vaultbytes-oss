@@ -11,7 +11,7 @@ This repository is the index. Each tool lives in its own repository with its own
 | find inputs where an encrypted program gives a different answer from its plaintext reference | [FHE Oracle](https://github.com/BAder82t/fhe-oracle-oss) | AGPL-3.0 |
 | check that an FHE library returns correct results on every push, from CI | [VaultBytes Verify Action](https://github.com/BAder82t/verify-action) (private pilot, a token is needed) | no licence file yet, see its README |
 | replay known attacks against your FHE configuration as a regression gate | [FHE Attack Replay](https://github.com/BAder82t/fhe-attack-replay) (also a [GitHub Action](https://github.com/marketplace/actions/fhe-attack-replay)) | Apache-2.0 |
-| compute fairness metrics on encrypted predictions | [Fairlearn-FHE](https://github.com/BAder82t/fairlearn-fhe) | Apache-2.0 |
+| compute fairness metrics on encrypted predictions | [Fairlearn-FHE](https://github.com/BAder82t/fairlearn-fhe) ([docs](https://bader82t.github.io/fairlearn-fhe/)) | Apache-2.0 |
 | produce signed, depth-tracked audit evidence for regulated AI | [RegAudit-FHE](https://github.com/BAder82t/regaudit-fhe) | AGPL-3.0, with a commercial licence |
 | explain encrypted models (Kernel SHAP under CKKS) | [CipherExplain](https://vaultbytes.com/cipherexplain.html), whose BHDR regression kernel is open in [bhdr-encrypted-shap](https://github.com/BAder82t/bhdr-encrypted-shap) | AGPL-3.0, with a commercial licence |
 | keep data and models private across organisations, with purpose-bound release and auditable evidence | [Encompute](https://github.com/BAder82t/Encompute) | AGPL-3.0 |
@@ -42,9 +42,14 @@ Encrypted inference system
 
 Pin any third-party Action, including ours, to a full commit SHA and not to a tag name, and give the workflow `permissions: contents: read`. The Verify Action documents this, the one host it contacts and how to check a release in its [SECURITY.md](https://github.com/BAder82t/verify-action/blob/main/SECURITY.md).
 
+## Research repositories
+
+- [kem-cct-matrix](https://github.com/BAder82t/kem-cct-matrix): a compiler-induced timing leak in PQClean HQC-128 across clang releases, with the evidence, harnesses and a CI gate.
+- [PermNet-RM](https://github.com/BAder82t/PermNet-RM): a branch-free Reed-Muller encoder for HQC.
+
 ## Security reports
 
-Report a vulnerability in a tool through that repository's `SECURITY.md` where it has one (Encompute, FHE Attack Replay, Fairlearn-FHE, RegAudit-FHE, VaultBytes Verify Action). For anything else, use the contact details at <https://vaultbytes.com>. Please do not open a public issue for a vulnerability.
+Report a vulnerability in a tool through that repository's `SECURITY.md`. Each tool repository listed above has one, and the Verify Action, FHE Oracle and BHDR repositories take reports privately through the **Security** tab on GitHub. Please do not open a public issue for a vulnerability.
 
 ## Licence of this repository
 
